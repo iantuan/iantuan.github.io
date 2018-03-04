@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-26T10:40:50+08:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/02/26/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-02-26T10:39:51+08:00</published><updated>2018-02-26T10:39:51+08:00</updated><id>http://localhost:4000/jekyll/update/2018/02/26/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/02/26/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-27T16:35:20+08:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Pomelo Study</title><link href="http://localhost:4000/2018/02/27/pomelo-study.html" rel="alternate" type="text/html" title="Pomelo Study" /><published>2018-02-27T00:00:00+08:00</published><updated>2018-02-27T00:00:00+08:00</updated><id>http://localhost:4000/2018/02/27/pomelo-study</id><content type="html" xml:base="http://localhost:4000/2018/02/27/pomelo-study.html">&lt;h2 id=&quot;pomelo-study&quot;&gt;Pomelo Study&lt;/h2&gt;
+
+&lt;h3 id=&quot;create-docker-network&quot;&gt;Create Docker network&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ docker network create pomelo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;create-database-docker-container&quot;&gt;Create Database Docker Container&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ docker run --name pomelomysql -e MYSQL_ROOT_PASSWORD=12345 -p 3306:3306 -v $PWD:/root/loardofpomelo --network pomelo -d mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;create-pomelo-docker&quot;&gt;Create Pomelo docker&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ docker run -ti --name mypomelo -v $PWD:/rrot/node/loardofpomelo -p 3001:3001 -p 3014:3014 -p 30101:3010 -p 3011:3011 --network pomelo node:4 bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;setup-pomelo-environment&quot;&gt;Setup Pomelo Environment&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd /root/node/loardofpomelo
+ 
+$ sh nom-install.sh
+ 
+$ npm install -g component
+ 
+$ cd web-server
+$ sh bin/component.sh
+ 
+$ npm install pomelo -g
+$ apt-get update
+$ apt-get install sysstat
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;start-game-server&quot;&gt;Start Game Server&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd game-server
+$ pomelo start -e development
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;start-web-server&quot;&gt;Start Web Server&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd web-server
+$ node app
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Pomelo Study</summary></entry><entry><title type="html">機器學習基石-第二講筆記</title><link href="http://localhost:4000/2018/02/26/mytest.html" rel="alternate" type="text/html" title="機器學習基石-第二講筆記" /><published>2018-02-26T23:39:51+08:00</published><updated>2018-02-26T23:39:51+08:00</updated><id>http://localhost:4000/2018/02/26/mytest</id><content type="html" xml:base="http://localhost:4000/2018/02/26/mytest.html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;</content><author><name>iantuan</name></author><category term="Machine-Learning" /><summary type="html">前言</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/02/26/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-02-26T10:39:51+08:00</published><updated>2018-02-26T10:39:51+08:00</updated><id>http://localhost:4000/jekyll/update/2018/02/26/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/02/26/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
